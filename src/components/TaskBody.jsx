@@ -58,7 +58,7 @@ export default function TaskBody(task) {
             ))}
           </ul>
         </td>
-        <td className="text-center">{task.priority}</td>
+        <td className="text-center capitalize">{task.priority}</td>
         <td>
           <div className="flex items-center justify-center space-x-3">
             <button

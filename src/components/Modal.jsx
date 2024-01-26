@@ -44,7 +44,7 @@ export default function Modal() {
         taskItem: taskInput,
       });
       setModal(false);
-      toast.success("Task Updated Successfully!");
+      toast.success("New Task Created Successfully!");
     }
   }
   // update task
