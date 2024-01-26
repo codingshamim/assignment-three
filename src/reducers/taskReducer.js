@@ -5,7 +5,6 @@ export default function taskReducer(tasks, action) {
       // create new task
       return [...tasks, action.taskItem];
     }
-
     case "delete_all_task": {
       // delete all task
       return [];

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { TaskContext } from "../contexts/TaskContext";
 import Tag from "./Tag";
+import { toast } from "react-toastify";
 export default function TaskBody(task) {
   const tags = task.tags;
   const { setEditTask, setModal, dispatch } = useContext(TaskContext);
@@ -65,7 +66,7 @@ export default function TaskBody(task) {
               className="text-red-500"
               onClick={() => {
                 const isConfirm = window.confirm(
-                  `Are you sure you want to delete the task ' "${task.title}" `
+                  `Are you sure you want to delete the task "${task.title}" `
                 );
                 if (isConfirm) {
                   dispatch({

@@ -16,12 +16,15 @@ export default function TaskBoardHeader() {
               <div className="relative overflow-hidden rounded-lg text-gray-50 md:min-w-[380px] lg:min-w-[440px]">
                 <input
                   type="search"
-                  className="z-20 block w-full bg-gray-800 px-4 py-2 pr-10 focus:outline-none"
+                  className={`${
+                    tasks.length === 0 ? "bg-gray-300" : "bg-gray-800"
+                  } z-20 block w-full  px-4 py-2 pr-10 focus:outline-none`}
                   placeholder="Search Task"
                   value={searchValue}
                   onChange={(e) => {
                     setSearchValue(e.target.value);
                   }}
+                  disabled={tasks.length === 0}
                 />
                 <button
                   type="submit"

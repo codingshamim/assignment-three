@@ -40,6 +40,7 @@ const initialState = [
   },
 ];
 
+// eslint-disable-next-line react/prop-types
 export default function TasksProvider({ children }) {
   // Task Reducer
   const [tasks, dispatch] = useReducer(taskReducer, initialState);
@@ -49,6 +50,7 @@ export default function TasksProvider({ children }) {
   const [modal, setModal] = useState(false); // for toggle modal
   const [editTask, setEditTask] = useState(null); // for edit task
 
+  
   const taskManagement = {
     tasks,
     dispatch,
