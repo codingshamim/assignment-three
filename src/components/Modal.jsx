@@ -73,7 +73,7 @@ export default function Modal() {
       <div className="bg-[rgba(0,0,0,0.5)] flex  justify-center items-center top-0 left-0 fixed w-full z-50 h-screen">
         <div className=" bg-[#191D26] rounded-xl border border-[#FEFBFB]/[36%]  p-9 max-md:px-4 w-full max-w-[600px] lg:p-11 ">
           <h2 className="mb-9 text-center text-2xl font-bold text-white lg:mb-11 lg:text-[28px]">
-            Add New Task
+            {editTask ? "Edit Task " : "Add New Task"}
           </h2>
 
           {/* inputs */}
